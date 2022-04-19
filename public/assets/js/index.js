@@ -1535,7 +1535,11 @@
                             data: 'create_by',
                             type: 'string'
                         },
-                    ]
+                    ],
+                    select: {
+                        style: 'multi',
+                        items: 'row'
+                    }
                 });
             });
         }
@@ -1564,4 +1568,9 @@
                 }
             });
         }
-        var testcommitpush;
+        $("#testcheck").click(function(){
+            var row_sel = table_report_user.rows( { selected: true } ).data();
+            $.each(row_sel, function(index, value){
+                console.log(value.id);
+             });
+        })

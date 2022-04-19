@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bulma.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.4/css/select.dataTables.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
 </head>
 <style>
@@ -757,6 +758,11 @@
             </header>
             <section class="modal-card-body" >
                 <div class="container section" style="padding-left:0px; padding-right:0px;">
+                <div class="columns">
+                    <div class="column">
+                        <button  type="button" class="button is-danger is-outlined  is-rounded" id="testcheck">Delete All !</button>
+                    </div>
+                </div>
                     <div class="columns">
                         <div class="column">
                             <table id="tbl_report_user" class="table is-striped is-bordered  is-hoverable" style="width:100%">
@@ -813,6 +819,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bulma.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/table-to-excel/dist/tableToExcel.js'); ?>"></script>
+    <script src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
     <script>
         var data_product,data_type,data_unit;
         $(document).ready(function () {
