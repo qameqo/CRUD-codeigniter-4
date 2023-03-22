@@ -818,16 +818,20 @@
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bulma.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bulma.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/js/table-to-excel/dist/tableToExcel.js'); ?>"></script>
+    <!-- <script type="text/javascript" src="<?php echo base_url('assets/js/table-to-excel/dist/tableToExcel.js'); ?>"></script> -->
     <script src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
     <script>
         var data_product,data_type,data_unit;
         $(document).ready(function () {
-            get_product();
-            get_type_product();
-            get_unit();
-            get_report();
-            get_user();
+        var signined = $("#signined").attr('data-signined');
+            if(signined == true){
+                get_product();
+                get_type_product();
+                get_unit();
+                get_report();
+                get_user();
+            }
+            
             toastr.options = {
                 "closeButton": true,
                 "debug": false,

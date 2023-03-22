@@ -2,6 +2,8 @@
         var urlmain = $("#signined").attr('data-url');
         var data_product,data_type,data_unit,data_report_product,data_report_user;
         var data_product_c,data_type_c,data_unit_c,data_report_product_c,data_report_user_c;
+        var signined = $("#signined").attr('data-signined');
+        
         jQuery(function ($) {
             $(document).ajaxSend(function () {});
             $(document).ajaxStart(function () {});
@@ -564,7 +566,6 @@
         var md_add_product = new BulmaModal("#md-add-product");
         var md_qua_product = new BulmaModal("#md-qua-product");
         var md_report_product = new BulmaModal("#md-report-product");
-        var signined = $("#signined").attr('data-signined');
         if (signined == "") {
             btn.addEventListener("click", function () {
                 mdl.show()
@@ -669,7 +670,6 @@
         })
 
         function edit_type_product(element){
-            var signined = $("#signined").attr('data-signined');
             var btn_add_type_product = document.querySelector("#btn-add-type-product");
             var md_add_type_product = new BulmaModal("#md-add-type-product");
             if (signined == "") {
@@ -697,7 +697,6 @@
         }
 
         function edit_unit(element){
-            var signined = $("#signined").attr('data-signined');
             var btn_add_unit = document.querySelector("#btn-add-unit");
             var md_add_unit = new BulmaModal("#md-add-unit");
             if (signined == "") {
@@ -1282,7 +1281,6 @@
             }
         });
         function edit_product(element){
-            var signined = $("#signined").attr('data-signined');
             var btn_add_product = document.querySelector("#btn-add-product");
             var md_add_product = new BulmaModal("#md-add-product");
             if (signined == "") {
@@ -1346,7 +1344,6 @@
       
         });
         function add_quality_product(element){
-            var signined = $("#signined").attr('data-signined');
             var md_qua_product = new BulmaModal("#md-qua-product");
             if (signined == "") {
                 toastr.options.progressBar = true,
@@ -1365,7 +1362,6 @@
             document.getElementById("qua-product").placeholder = "Enter Add Quality...";
         }
         function delete_quality_product(element){
-            var signined = $("#signined").attr('data-signined');
             var md_qua_product = new BulmaModal("#md-qua-product");
             if (signined == "") {
                 toastr.options.progressBar = true,
